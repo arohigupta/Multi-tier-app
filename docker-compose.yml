@@ -1,0 +1,33 @@
+# @Author: Arohi Gupta <agupta>
+# @Date:   2018-10-02T17:55:47-07:00
+# @Email:  agupta@juniper.net
+# @Filename: docker-compose.yml
+# @Last modified by:   agupta
+# @Last modified time: 2018-10-05T10:45:15-07:00
+
+version: '3'
+services:
+  python:
+    #image: "python:3.5"
+    build:
+      context: .
+      dockerfile: docker/python/Dockerfile
+    container_name: app_test
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./myshop:/myshop
+    links:
+      - redis
+  redis:
+    build:
+      context: .
+      dockerfile: docker/redis/Dockerfile
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    build:
+      context: .
+      dockerfile: docker/rabbitmq/Dockerfile
+    ports:
+      - "5673:5673"
