@@ -3,7 +3,7 @@
 # @Email:  agupta@juniper.net
 # @Filename: settings.py
 # @Last modified by:   agupta
-# @Last modified time: 2018-10-04T11:15:56-07:00
+# @Last modified time: 2018-10-05T12:25:29-07:00
 
 """
 Django settings for myshop project.
@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
+BROKER_URL = 'amqp://admin:contrail123@rabbitmq:5672//'
 CART_SESSION_ID = 'cart'
 CACHE_TTL = 60 * 15
 REDIS_HOST='redis'
