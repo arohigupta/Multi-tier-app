@@ -1,3 +1,3 @@
 # Multi-tier-app
 ### Topology
-![Topology](./image/flow.png)
+![Topology](./myshop/images/flow.png)
