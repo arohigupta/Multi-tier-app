@@ -3,7 +3,7 @@
 # @Email:  agupta@juniper.net
 # @Filename: settings.py
 # @Last modified by:   agupta
-# @Last modified time: 2018-10-05T12:25:29-07:00
+# @Last modified time: 2018-10-11T20:56:51-07:00
 
 """
 Django settings for myshop project.
