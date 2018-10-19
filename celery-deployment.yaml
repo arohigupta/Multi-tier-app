@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose convert -f docker-compose.yml
+    kompose.cmd: kompose convert
     kompose.version: 1.16.0 (0c01309)
   creationTimestamp: null
   labels:
@@ -10,8 +10,7 @@ metadata:
   name: celery
 spec:
   replicas: 1
-  strategy:
-    type: Recreate
+  strategy: {}
   template:
     metadata:
       creationTimestamp: null
@@ -22,12 +21,5 @@ spec:
       - image: arohigupta/myproject_celery:1.0
         name: celery
         resources: {}
-        volumeMounts:
-        - mountPath: /myshop
-          name: celery-claim0
       restartPolicy: Always
-      volumes:
-      - name: celery-claim0
-        persistentVolumeClaim:
-          claimName: celery-claim0
 status: {}

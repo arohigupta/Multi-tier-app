@@ -12,8 +12,6 @@ services:
     container_name: app
     ports:
       - "8000:8000"
-    volumes:
-      - ./myshop:/myshop
     links:
       - redis
   redis:
@@ -29,7 +27,5 @@ services:
       - "5672:5672"
   celery:
     image: "arohigupta/myproject_celery:1.0"
-    volumes:
-      - ./myshop:/myshop
     links:
       - rabbitmq
