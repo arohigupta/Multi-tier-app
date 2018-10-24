@@ -4,10 +4,10 @@
 # @Filename: run_all.sh
 # @Last modified by:   agupta
 # @Last modified time: 2018-10-23T10:37:37-07:00
-kubectl apply -f rabbitmq-deployment
-kubectl apply -f rabbitmq-service
-kubectl apply -f redis-deployment
-kubectl apply -f redis-service
-kubectl apply -f celery-deployment
-kubectl apply -f python-service
-kubectl apply -f python-deployment
+kubectl apply -f rabbitmq-deployment.yaml
+kubectl apply -f rabbitmq-service.yaml
+kubectl apply -f redis-deployment.yaml
+kubectl apply -f redis-service.yaml
+kubectl apply -f celery-deployment.yaml
+kubectl apply -f python-service.yaml
+kubectl apply -f python-deployment.yaml
