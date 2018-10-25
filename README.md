@@ -33,3 +33,9 @@ To untaint the same node use:
 cd Multi-tier-app/
 ./untaint_nodes.sh sanfrancisco-compute-1
 ```
+
+To delete all pods except the frontend, use the following script:
+```
+cd Multi-tier-app/
+./delete_pods.sh
+```
